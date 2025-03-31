@@ -1,6 +1,7 @@
 pandas
+numpy
 plotly
 dash
 dash-bootstrap-components
-numpy
 pdfkit
+wkhtmltopdf
