@@ -1,7 +1,7 @@
-pandas
-numpy
-plotly
-dash
-dash-bootstrap-components
-pdfkit
-wkhtmltopdf
+dash==2.14.2
+pandas==2.1.4
+plotly==5.18.0
+dash-bootstrap-components==1.6.0
+gunicorn==21.2.0
+pdfkit==1.0.0
+numpy==1.26.3

@@ -1,0 +1,1 @@
+web: ./install-wkhtmltopdf.sh && gunicorn exportVisualize:server

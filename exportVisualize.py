@@ -19,7 +19,7 @@ from io import BytesIO
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # Configure PDFKit - Update this path to your wkhtmltopdf installation
-WKHTMLTOPDF_PATH = '/usr/local/bin/wkhtmltopdf'  # or the path from `which wkhtmltopdf`
+WKHTMLTOPDF_PATH = os.getenv('WKHTMLTOPDF_PATH', '/usr/local/bin/wkhtmltopdf')
 config = pdfkit.configuration(wkhtmltopdf=WKHTMLTOPDF_PATH)
 
 def load_and_preprocess(df, sample_size=50000):
@@ -1635,8 +1635,10 @@ def create_dashboard_app():
     
     return app
 
+app = create_dashboard_app()
+server = app.server
+
 if __name__ == "__main__":
     print("\nStarting the dashboard server...")
     print("\nOpen your browser at http://127.0.0.1:8050/ to view the dashboard")
-    app = create_dashboard_app()
     app.run(debug=False, port=8060)
