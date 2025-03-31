@@ -19,7 +19,7 @@ from io import BytesIO
 warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # Configure PDFKit - Update this path to your wkhtmltopdf installation
-WKHTMLTOPDF_PATH = r'E:\\wkhtmltopdf\\bin\\wkhtmltopdf.exe'  # Update this path
+WKHTMLTOPDF_PATH = r'/usr/bin/wkhtmltopdf'  # Update this path
 config = pdfkit.configuration(wkhtmltopdf=WKHTMLTOPDF_PATH)
 
 def load_and_preprocess(df, sample_size=50000):
