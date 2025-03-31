@@ -1,1 +1,1 @@
-web: ./install-wkhtmltopdf.sh && gunicorn exportVisualize:server
+web: chmod +x install-wkhtmltopdf.sh && ./install-wkhtmltopdf.sh && gunicorn exportVisualize:server

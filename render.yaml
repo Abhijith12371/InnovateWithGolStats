@@ -2,7 +2,10 @@ services:
   - type: web
     name: data-visualization-dashboard
     runtime: python
-    buildCommand: "./install-wkhtmltopdf.sh && pip install -r requirements.txt"
+    buildCommand: |
+      chmod +x install-wkhtmltopdf.sh
+      ./install-wkhtmltopdf.sh
+      pip install -r requirements.txt
     startCommand: "gunicorn exportVisualize:server"
     envVars:
       - key: WKHTMLTOPDF_PATH
