@@ -1641,4 +1641,4 @@ server = app.server
 if __name__ == "__main__":
     print("\nStarting the dashboard server...")
     print("\nOpen your browser at http://127.0.0.1:8050/ to view the dashboard")
-    app.run(debug=False, port=8060)
+    app.run(host="0.0.0.0",debug=False, port=8060)
